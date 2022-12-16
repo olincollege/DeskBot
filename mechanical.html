@@ -20,8 +20,13 @@
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
+						<li><a href="demo.html" >Demo</a></li>
+						<li><a href="systemOverview.html" >System Overview</a></li>
+						<li><a href="mechanical.html" class = "active">Mechanical</a></li>
+						<li><a href="electrical.html">Electrical</a></li>
+						<li><a href="software.html" >Software and Firmware</a></li>
+						<li><a href="budget.html">Budget</a></li>
+						<li><a href="timeline.html">Timeline</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -34,8 +39,24 @@
 						<div class="inner">
 							<h1 class="major">DeskBot</h1>
 							<h2>XY H-Bot</h2>
+							<iframe src="https://sketchfab.com/models/987be64de52947d0b28fee0f7af6c9ea/embed" width="100%" height="400" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
 							<h3>How does it work?</h3>
-							<p>Unlike an ordinary XY gantry in which each axis is controlled independently by two motors, an H-Bot gantry design incorporates both motors into the motion of the carriage. This means that, by altering the magnitude and direction of torque on the motors, the carriage can be moved in any direction within the XY plane. When the two motors run in opposite directions at the same speed, the carriage will translate linearly towards/away from the motors. When the motors are run in the same direction, the carriage will translate linearly from side to side. </p>
+
+							<main class='main' style=" display: flex; justify-content: center; align-items: center;">
+
+								<section class='left section' style="width: 1000px">
+							  
+									<p>Unlike an ordinary XY gantry in which each axis is controlled independently by two motors, an H-Bot gantry design incorporates both motors into the motion of the carriage. This means that, by altering the magnitude and direction of torque on the motors, the carriage can be moved in any direction within the XY plane. When the two motors run in opposite directions at the same speed, the carriage will translate linearly towards/away from the motors. When the motors are run in the same direction, the carriage will translate linearly from side to side. </p>
+							  
+								</section>
+								<section class='right section'>
+									<video controls muted   style="width: 50%;
+									height: 56.25%; margin-left: 20.875%;">  
+										<source src="images/diagonal.MOV" type="video/mp4">  
+									</video>
+								</section>
+								</main>
+					
 					<h3>How is it better?</h3>
 					<p>In the case of a traditional gantry system, one of the motors must be driven by the other. This leads to disproportionate load on one of the motors and can lead to imbalances that require secondary motors to run in parallel to support movement. Oppositely, the H-Bot motors split all loads evenly which prevents uneven wear and misalignment of motors. </p>
 					<h3>Design and Material Choices</h3>
@@ -50,13 +71,22 @@
 					<p>Given a larger budget or more time, there are several iterative improvements that we wish we could’ve made. One of the major improvements is replacing roller motion with linear bearing sliders. These would introduce two significant improvements: firstly, rolling resistance on linear bearing sliders is far lower than on wheel rollers. This would produce a far smoother motion with lower total friction along the entirety of the gantry. Secondly, due to the nature of linear sliders sitting within a notch in the rail as opposed to on the surface like with wheels, issues of wobble would be significantly reduced because the bar could not rotate about the wheelbase. Another major improvement deals with the ways in which the pulleys (and wheels) are constrained. Currently, they are just held between two plates of material with a screw going through the center of both. This means that, upon rotation, friction is created on both bearing faces. We attempted to use washers to overcome this issue, but the diameter of the washers was greater than that of the internal bearing, and so friction still continued. If we were given more time, we could’ve fabricated smaller washers that could minimize the friction generated on these faces and on the belt in general. 
 					</p>
 					<h2>Gripper</h2>
-					<h3>Carriage System (Z Motion)</h3>
+					<iframe src="https://sketchfab.com/models/a3b499a6e2894786957e1f2ea07f29ad/embed" width="100%" height="400" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
+
+										<h3>Carriage System (Z Motion)</h3>
+
 					<p>The gripper mechanism is able to move along the z-axis using a threaded nut attached to a lead screw on a stepper motor. Due to our limited budget, we only purchased one lead screw. We did not want it to screw through the center of the gripper, but offsetting it would cause the system to rotate about the z-axis. We solved this issue by adding a support bar that limited gripper movement in the x and y directions. The edges of the holes are rounded to limit friction between the bar and the support piece. Both the lead screw/stepper and the support bar fasten to the bottom of the carriage.</p>
+					<iframe src="https://sketchfab.com/models/8d96b9cce30a4abdaf45bd265c7cb7f0/embed" width="100%" height="400" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
+
 					<h3>Gripping Mechanism</h3>
+					<iframe src="https://sketchfab.com/models/aae69f6d9af340b18c6d5357377bf392/embed" width="100%" height="400" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
+
 					<p>The gripping mechanism consists of a linkage system and the grippers slide along carbon fiber rods. The middle linkage (a custom servo horn) translates rotational motion of the servo into linear motion of the grippers. </p>
 					<p>One issue we ran into was that as the servo horn rotated, it moved the other linkages outside of the frame - so a large section of the frame had to be removed for the grippers to close. As a result, our frame was more flimsy since there was a greater force being applied over a smaller cross-sectional area. To fix this, we added a bar that was clear of the way of the linkage system while supporting weight on the frame. </p>
 					<p>At the bottom of the grippers, foam is attached so that they could slightly form around the object they are picking up. There is also an indented section at the bottom for the beam break sensors to fit into without hitting objects being picked up.</p>
 					<h3>Camera Mount</h3>
+					<iframe src="https://sketchfab.com/models/13b071a3cf2c4313ad029f2bd117ef52/embed" width="100%" height="400" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
+
 					<p>The camera is centered above and in front of the frame of the gripping mechanism.
 					</p>
 				</section>
