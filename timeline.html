@@ -59,7 +59,33 @@
 							<p>In this sprint, we began to pivot towards a two Arduino control system and using the Adafruit Motorshields to power the stepper motors for the xy movement on the gantry. We also began exploring and using the A4988, specifically for a stepper motor that turns a lead screw. We also began using the IR Beam Break Sensors to integrate into the gripper. A picture of the electrical system during the sprint is shown below.</p>
 							<span class="image fit"><img src="images/electricalSprint2.png" alt="" style="width: 20vw; min-width: 200px;"/></span>
 							<h3>Mechanical</h3>
+							<h4>H-Bot Gantry</h4>
+							<p>During this iteration, we began shifting towards an H-Bot gantry system that would allow robust xy movement with two stepper motors. Below is a picture of the CAD of the connections along the belt and the progress made on the H-Bot gantry system</p>
+							<div class="row">
+								<div class="column">
+								  <img src="images/sprint2GantryCAD.png" alt="Snow" style="width:70%">
+								</div>
+								<div class="column">
+								  <img src="images/sprint2HBot.gif" alt="Forest" style="width:70%">
+								</div>
+							  </div>
+							<h4>Gripper</h4>
+							<p>In this sprint, we also began iterating the design of the gripper. We added slots for the IR Beam Break sensor. Below is the CAD of the gripper and a gif of the gripper closing when it detects an object inside of the arms. </p>
+							<div class="row">
+								<div class="column">
+								  <img src="images/sprint2GripperCAD.png" alt="Snow" style="width:70%">
+								</div>
+								<div class="column">
+								  <img src="images/sprint2GripperClose.gif" alt="Forest" style="width:70%">
+								</div>
+							  </div>
+							  <br>
+							  <div style="float: left; margin: 0 30px 0 15px;">
+								<span class="image fit"><img src="images/perfectionShapeDetection.gif" alt="" style="width: 20vw; min-width: 200px;"/></span></div>
 							<h3>Software</h3>
+							
+							<p>For this sprint, we developed more code that enabled detection of different objects without using color. Specifically, we wanted to solve the game perfection, which is a shape matching game for children. As shown on the left, as a shape is rotated the python script tries to match it to one of the shapes inside the perfection game. Although we did not develop on this more in the future for the gantry movement, this code lays the foundation for placing and creating a gantry system that can play Perfection. </p>
+
 							<h2>Sprint 3</h2>
 						</div>
 					</section>
