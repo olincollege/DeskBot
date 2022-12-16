@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Hyperspace by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Hyperspace</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="generic.html" class="active">Generic</a></li>
+						<li><a href="elements.html">Elements</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Timeline</h1>
+							<p>Our project timeline was divided into 3 separate sprints.</p>
+							<h2>Sprint 1</h2>
+							<h3>Mechanical</h3>
+							<div style="float: right; margin: 0 0 15px 15px;">
+								<span class="image fit"><img src="images/gripperSprint1.jpg" alt="" style="width: 8vw; min-width: 100px;"/></span>	
+							</div>		
+							<p>During this sprint we worked on creating a gantry system that moves along one axis and create an arm that is able to grab objects using a rack and pinion system. The gripper CAD is shown on the right.</p>
+
+							<h3>Electrical</h3>
+							<p>For the electrical system, we initially decided on using and ultrasonic sensor to detect how far away objects were from the gripper. Below is the circuit diagram for the ultrasonic sensor circuit, that relies on a series of filters and amplifications through operational amplifiers to output an accurate signal.</p>
+							<span class="image fit"><img src="images/ultrasonic sensor.png" alt="" style="width: 50vw; min-width: 100px;" /></span>	
+							<h3>Software</h3>
+							<p>For the software system, we began implementing a script that sends motor speeds to an arduino, while trying to follow a red object. Below shows the mask that filters out non red objects and the terminal is showing the motor speeds that were being set. </p>
+							<span class="image fit"><img src="images/maskingSprint1.gif" alt="" /></span>	
+								<div style="float: left; margin: 0 30px 0 15px;">
+								<span class="image fit"><img src="images/sprint1Final.gif" alt="" style="width: 8vw; min-width: 100px;"/></span>	</div>
+								<h3>Sprint 1 Final Product</h3>
+								<p>At the end of the sprint we achieved a one dimensional gantry system that is able to follow a red object as shown on the left. </p>
+								<p>The progress on this sprint help us establish a python controller that would be able to send inputs to a motor based on a camera input. Furthermore, it also began the process of creating the belt system that would eventually be an important foundation for future mechanical design.</p>
+
+								<br>
+							<h2>Sprint 2</h2>
+							<h3>Electrical</h3>
+							<p>In this sprint, we began to pivot towards a two Arduino control system and using the Adafruit Motorshields to power the stepper motors for the xy movement on the gantry. We also began exploring and using the A4988, specifically for a stepper motor that turns a lead screw. We also began using the IR Beam Break Sensors to integrate into the gripper. A picture of the electrical system during the sprint is shown below.</p>
+							<span class="image fit"><img src="images/electricalSprint2.png" alt="" style="width: 20vw; min-width: 200px;"/></span>
+							<h3>Mechanical</h3>
+							<h3>Software</h3>
+							<h2>Sprint 3</h2>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Generic - Hyperspace by HTML5 UP</title>
+		<title>DeskBot</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -16,7 +16,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="title">Hyperspace</a>
+				<a href="index.html" class="title">DeskBot</a>
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
@@ -32,11 +32,30 @@
 				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">A Generic Page</h1>
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-						</div>
+							<h1 class="major">Software and Firmware</h1>
+							<h2>Firmware</h2>
+							<p>In our system we use two Arduinos to control the two big components of our gantry: the H-Bot and the Gripper.</p>
+							<h3>H-Bot Gantry Control</h3>
+							<h4>Stepper Motor Control</h4>
+							<p>The H-Bot system has 9 different directions that we have to control, but to allow for different accelerations, specifically half the acceleration,  we have 13 different cases.</p>
+							<ul style="list-style: none;">
+								<li>a - Stopped</li>
+								<li>b - Forward</li>
+								<li>c - Backward</li>
+								<li>d - Forward Left Diagonal</li>
+								<li>e - Forward Right Diagonal</li>
+								<li>f - Backward Left Diagonal</li>
+								<li>g - Backward Right Diagonal</li>
+								<li>h - Left</li>
+								<li>i - Right</li>
+								<li>j - Slow Forward</li>
+								<li>k - Slow Backwards</li>
+								<li>l - Slow Left</li>
+								<li>m - Slow Right</li>
+							</ul>
+							<p>In order to set one of these states, there needs to be a serial input that specifies the case and number of steps. For example, typing 'b100' sets the state to b or forward and runs it for 100 steps. Once the command is finished, the Arduino prints 'finished' to Serial letting the Python Controller know the instruction is finished.</p>
+							<p>This implementation creates a flexible controller that enables many applications. In this specific use case, it allows us to specify movement of objects to specific locations to organize them by simply sending a commands through serial. However, this controller would allow for other applications, such as playing chess, drawing on paper or any other not rotational xyz movement. </p>
+							</div>
 					</section>
 
 			</div>
